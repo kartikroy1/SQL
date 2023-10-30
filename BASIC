@@ -1,0 +1,186 @@
+SQL CODE
+
+create table student(
+rollno int primary key,
+name varchar(89),
+marks int not null,
+grade varchar(5),
+city varchar(78)
+
+);
+
+insert into student
+(rollno,name ,marks,grade,city)
+values
+(101, "anil",450,"A","PATNA"),
+(102, "SUnil",550,"c","PATNA"),
+(103, "amit",150,"A","madhubani"),
+(104, "rahul",350,"e","supaul"),
+(105, "sumit",650,"c","nalanda"),
+(106, "kundan",490,"A","rachi"), 
+(107, "raju",250,"p","dharbhanga");
+
+select * from student
+
+select  city from student;
+
+
+select * from student
+where marks>500;
+
+
+select * from student
+where city="patna";
+
+select * from student
+where marks = 250;
+#AND OPRATER
+select * from student
+where city= "patna" and grade ="A";
+#OR OPRATER
+SELECT * FROM STUDENT
+WHERE NAME= "SUNIL" OR CITY= "NALANDA";
+
+SELECT * FROM STUDENT
+WHERE MARKS+50= 600;
+
+
+#BETWEEN OPRATER
+SELECT * FROM STUDENT
+WHERE MARKS BETWEEN 550 AND 600;
+
+# IN OPRATER
+
+SELECT * FROM STUDENT
+WHERE CITY IN ("PATNA","NALANDA","HARYANA");
+
+#IN NOT 
+
+SELECT * FROM STUDENT
+WHERE CITY NOT IN ("DELHI","PATNA","DHARBHANGA");
+
+
+# limit
+select * from student
+where grade= "a"
+limit 4;
+
+select * from student 
+where name = "sunil";
+
+#ORDER BY CLAUSE
+SELECT * FROM STUDENT
+ORDER BY ROLLNO ASC;
+
+SELECT * FROM STUDENT 
+ORDER BY CITY ASC;
+
+SELECT * FROM STUDENT
+ORDER BY MARKS ASC;
+
+SELECT * FROM STUDENT
+ORDER BY NAME ASC;
+
+select * from student
+order by city asc;
+
+SELECT * FROM STUDENT
+ORDER BY MARKS;
+
+SELECT * FROM STUDENT 
+ORDER BY MARKS DESC;
+insert into student
+values
+(11 ,"aman",768,"C","DELHI");
+
+SELECT * FROM STUDENT;
+#UPDATE QUERY
+UPDATE STUDENT
+SET NAME= "SUNIL"
+WHERE ROLLNO= 102;
+
+SELECT * FROM STUDENT;
+
+#NOT LIKE
+SELECT * FROM STUDENT
+WHERE ROLLNO NOT LIKE 134;
+
+SELECT * FROM STUDENT
+WHERE NAME NOT LIKE "%A";
+
+SELECT * FROM STUDENT 
+WHERE NAME NOT LIKE "A%"; #Select STUDENT THAT NOT NAME START WITH A          
+use  college;
+INSERT INTO STUDENT(rollno,   NAME,MARKS ,CITY)
+VALUES (234,"KARTIK",567,"MUMBAI");
+# null 
+select*from student
+where grade is null;
+
+# Not null
+select * from student
+where name = "%a" is not null;
+
+select * from student
+where name is not null;
+
+SELECT * FROM STUDENT;
+
+SELECT * FROM STUDENT
+ORDER BY MARKS;
+
+DELETE FROM STUDENT 
+WHERE NAME = "AMAN";
+
+SELECT NAME
+FROM STUDENT
+WHERE NAME 
+LIMIT 3;
+
+SELECT * FROM STUDENT
+LIMIT 2;
+
+SELECT * FROM STUDENT
+ORDER BY MARKS DESC
+LIMIT 10;
+
+SELECT MAX(MARKS)
+FROM STUDENT
+
+SELECT MIN(MARKS)
+FROM STUDENT;
+
+SELECT MAX(MARKS)
+FROM STUDENT
+WHERE GRADE = "A" ;
+
+SELECT MIN(MARKS) AS KK
+FROM STUDENT;
+
+SELECT COUNT(*)
+FROM STUDENT;
+
+SELECT COUNT(*)
+FROM STUDENT 
+WHERE MARKS>200;
+SELECT * FROM STUDENT
+
+SELECT COUNT(GRADE)
+FROM STUDENT
+
+SELECT COUNT( DISTINCT GRADE)
+FROM STUDENT
+
+SELECT COUNT(*)
+AS [NUMBER OF GRADE]
+FROM STUDENT
+
+SELECT SUM(MARKS)
+FROM STUDENT
+
+SELECT SUM(MARKS)
+FROM STUDENT 
+WHERE GRADE="A";
+
+
+
